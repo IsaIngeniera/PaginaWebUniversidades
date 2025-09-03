@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eras Educativas - Universidades </title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <!--Navegacion -->  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-graduation-cap me-2"></i>
+                Proyecto Universidades  
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="eras.html">Eras Educativas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="senales.html">Señales de Cambio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tendencias.html">Tendencias y PESTEL</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Header --> 
+    <section class="py-5 mt-5 bg-primary text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4 fw-bold mb-3">
+                        <i class="fas fa-history me-3"></i>
+                        Eras Educativas
+                    </h1>
+                    <p class="lead">Un recorrido por la evolución de la educación desde la antigüedad hasta nuestros días</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--Table -->
+   <div class="container">
+    <h2 class="mb-4 text-center">Tabla de Eras</h2>
+    <table id="erasTable" class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Categoría</th>
+          <th>Era 1 (1900–1950)<br>Formación elitista y tradicional</th>
+          <th>Era 2 (1951–1990)<br>Expansión y diversificación</th>
+          <th>Era 3 (1991–2020)<br>Masificación y tecnología inicial</th>
+          <th>Era 4 (2021–2025)<br>Universidad flexible e inclusiva</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Relación universidad - estudiante</td>
+          <td>Institución autoritaria, enseñanza memorística</td>
+          <td>Formación profesional para movilidad social</td>
+          <td>Aliado para la inserción laboral</td>
+          <td>Mentor y socio de aprendizaje de por vida</td>
+        </tr>
+        <tr>
+          <td>Tipo de estudiante</td>
+          <td>Élite económica, principalmente hombres</td>
+          <td>Clase media emergente</td>
+          <td>Inclusión de mujeres</td>
+          <td>Diversidad total, aprendizaje</td>
+        </tr>
+        <tr>
+          <td>Ubicación</td>
+          <td>Ciudades capitales</td>
+          <td>Expansión regional</td>
+          <td>Zonas rurales y urbanas</td>
+          <td>Aprendizaje híbrido global-local</td>
+        </tr>
+        <tr>
+          <td>Tendencias académicas</td>
+          <td>Carreras clásicas (Derecho, Medicina, Ingeniería Civil)</td>
+          <td>Carreras técnicas y aplicadas</td>
+          <td>Educación virtual incipiente, interdisciplinariedad</td>
+          <td>Microcredenciales, inteligencia artificial, aprendizaje personalizado</td>
+        </tr>
+        <tr>
+          <td>Servicios</td>
+          <td>Biblioteca física, clases magistrales</td>
+          <td>Laboratorios, residencias estudiantiles</td>
+          <td>Plataformas virtuales, convenios internacionales</td>
+          <td>Alianzas empresariales</td>
+        </tr>
+        <tr>
+          <td>Infraestructura</td>
+          <td>Edificios coloniales/republicanos, aulas grandes sin tecnología</td>
+          <td>Campus universitarios más amplios, laboratorios especializados</td>
+          <td>Edificios modernos, bibliotecas digitales, salones con proyectores</td>
+          <td>Campus inteligentes, aulas híbridas, espacios de coworking</td>
+        </tr>
+        <tr>
+          <td>Herramientas</td>
+          <td>Pizarra de tiza, libros impresos</td>
+          <td>Pizarra acrílica, retroproyector, laboratorios básicos</td>
+          <td>Computadores de escritorio, proyectores, internet</td>
+          <td>Dispositivos móviles, realidad virtual y simuladores</td>
+        </tr>
+        <tr>
+          <td>Útiles escolares</td>
+          <td>Cuadernos de tapa dura, plumas, reglas</td>
+          <td>Cuadernos, lapiceros, calculadoras básicas</td>
+          <td>Laptops, memorias USB, calculadoras científicas</td>
+          <td>Tablets, lápices digitales, computadoras inteligentes</td>
+        </tr>
+        <tr>
+          <td>Actividades</td>
+          <td>Cátedra magistral, exámenes orales</td>
+          <td>Investigación básica, actividades culturales</td>
+          <td>Seminarios, intercambios académicos</td>
+          <td>Proyectos comunitarios, educación continua</td>
+        </tr>
+        <tr>
+          <td>Interacción entre estudiantes</td>
+          <td>Grupos homogéneos, jerarquías sociales, exclusión</td>
+          <td>Apertura con divisiones por clase, género y bullying</td>
+          <td>Integración, bullying cibernético, riesgo de aislamiento virtual</td>
+          <td>Entornos híbridos globales, políticas contra bullying y género</td>
+        </tr>
+        <tr>
+          <td>Momentos culturales</td>
+          <td>Fundación de universidades nacionales y públicas</td>
+          <td>Expansión regional de la educación superior</td>
+          <td>Implementación de tecnología educativa</td>
+          <td>Universalización del acceso y aprendizaje permanente</td>
+        </tr>
+        <tr>
+          <td>Rol del profesor</td>
+          <td>Figura de autoridad absoluta, transmisor de conocimiento</td>
+          <td>Instructor y guía, combina teoría y práctica</td>
+          <td>Facilitador con tecnologías iniciales, promueve investigación</td>
+          <td>Mentor con IA y entornos inmersivos, pensamiento crítico</td>
+        </tr>
+        <tr>
+          <td>Relación universidad - industria</td>
+          <td>Universidades aisladas, sin conexión con la industria</td>
+          <td>Primeros convenios con empresas</td>
+          <td>Expansión de convenios internacionales, incubadoras universitarias</td>
+          <td>Ecosistemas de innovación con empresas, start-ups, proyectos conjuntos</td>
+        </tr>
+        <tr>
+          <td>Rol de la educación en contratación</td>
+          <td>Título universitario exclusivo como sello de élite</td>
+          <td>Formación profesional como requisito clave</td>
+          <td>Formación profesional como requisito clave</td>
+          <td>Portafolios digitales, habilidades certificadas</td>
+        </tr>
+        <tr>
+          <td>Selección de carreras</td>
+          <td>Prestigio social y familiar, carreras tradicionales</td>
+          <td>Movilidad social, primeras opciones técnicas</td>
+          <td>Orientación hacia empleabilidad y mercado global</td>
+          <td>Flexibilidad, pasión personal, impacto social y ambiental</td>
+        </tr>
+        <tr>
+          <td>Diversidad de oferta</td>
+          <td>Carreras clásicas, muy limitadas</td>
+          <td>Aumento de programas técnicos y profesionales</td>
+          <td>Gran expansión disciplinar, interdisciplinariedad inicial</td>
+          <td>Opciones híbridas, microcredenciales, programas personalizados</td>
+        </tr>
+        <tr>
+          <td>Rol de los posgrados</td>
+          <td>Muy limitado, estudios en el extranjero para élites</td>
+          <td>Expansión moderada en universidades nacionales</td>
+          <td>Crecimiento masivo, clave para investigación y especialización</td>
+          <td>Internacionalización, posgrados en línea, investigación aplicada</td>
+        </tr>
+        <tr>
+          <td>Duración promedio programas</td>
+          <td>Carreras largas, 6–7 años en promedio</td>
+          <td>Estandarización en 5 años, primeras reducciones</td>
+          <td>Programas flexibles, 4–5 años + posgrados especializados</td>
+          <td>Modularidad, carreras cortas (3–4 años) + microcredenciales</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#erasTable').DataTable({
+        responsive: true,
+        pageLength: 5,
+        language: {
+          url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json'
+        }
+      });
+    });
+  </script>
+
+   <!--Conclusiones --> 
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="text-center mb-5">Conclusiones</h2>
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fas fa-university"></i>
+            </div>
+            <div class="timeline-content">
+              <h4>Transformación del acceso universitario</h4>
+              <p>Antes, la universidad era un privilegio para pocos, pero hoy se ha convertido en un espacio abierto y accesible para distintos tipos de personas. Ahora se reconoce que cada estudiante es único y necesita una experiencia educativa a su medida. Las universidades ya no solo forman profesionales, también acompañan trayectorias de vida.</p>
+              <span class="badge bg-primary">Acceso</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fas fa-vr-cardboard"></i>
+            </div>
+            <div class="timeline-content">
+              <h4>Evolución tecnológica como eje central</h4>
+              <p>Pasamos de clases con tiza y tablero a entornos donde la realidad virtual, la inteligencia artificial y otras tecnologías son el centro del proceso educativo. Esto obliga a las universidades a repensar métodos, contenidos y espacios físicos.</p>
+              <span class="badge bg-info">Tecnología</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fas fa-building"></i>
+            </div>
+            <div class="timeline-content">
+              <h4>Infraestructura para nuevas formas de aprender</h4>
+              <p>Las aulas tradicionales están siendo reemplazadas por campus híbridos e inteligentes. La infraestructura ahora también es digital, diseñada para trabajo en equipo, investigación autónoma y conexión global.</p>
+              <span class="badge bg-warning">Infraestructura</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="timeline-content">
+              <h4>Diversidad del estudiantado como oportunidad</h4>
+              <p>Hoy en día hay más mujeres, estudiantes de zonas rurales, trabajadores, internacionales y de diferentes edades. Esto exige rutas de aprendizaje flexibles y enriquece los entornos con distintas miradas del mundo.</p>
+              <span class="badge bg-success">Diversidad</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-content">
+              <h4>Nuevas tendencias académicas</h4>
+              <p>Las carreras tradicionales ceden espacio a microcredenciales, programas modulares e interdisciplinarios. Se valoran habilidades prácticas, actualización constante y capacidad de conectar saberes. Las universidades también certifican competencias útiles.</p>
+              <span class="badge bg-secondary">Tendencias</span>
+            </div>
+          </div>
+
+          <div class="timeline-item future">
+            <div class="timeline-marker">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <div class="timeline-content">
+              <h4>Reconfiguración de los roles en el aula</h4>
+              <p>El docente ya no es solo transmisor de información, sino guía y facilitador. El estudiante construye conocimiento activamente, en una relación más horizontal y con mayor responsabilidad en su propio aprendizaje.</p>
+              <span class="badge bg-danger">Roles</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!--Video --> 
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="mb-4">Video: Eras de la Educación Universitaria</h2>
+                    <p class="lead mb-4">Descubre cómo han evolucionado las universidades a lo largo de la historia</p>
+                    
+                    <div class="video-container">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle fa-5x text-primary mb-3"></i>
+                            <h5>Video Promocional</h5>
+                            <video width="640" height="360" controls>
+                                <source src="Files/i1.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!--Footer --> 
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-graduation-cap me-2"></i> Investigación Universidades</h5>
+                    <p class="text-muted">Investigación sobre el futuro de la educación superior en Colombia</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-muted mb-0">© 2025 Proyecto Universitario. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--Bootstrap JS  --> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
