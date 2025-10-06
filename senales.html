@@ -5,22 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Señales de Cambio - Universidades</title>
     
-     Bootstrap CSS 
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-     Font Awesome 
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-     Google Fonts 
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Agregando estilos para los botones y modal -->
+    <style>
+        .team-buttons-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 60px 0;
+        }
+        
+        .team-button {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .team-button:hover {
+            transform: translateY(-10px) scale(1.05);
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .team-button:active {
+            transform: translateY(-5px) scale(1.02);
+        }
+        
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .image-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content-image {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+            animation: zoomIn 0.3s ease;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 30px;
+            right: 50px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10000;
+        }
+        
+        .close-modal:hover {
+            color: #ff6b6b;
+            transform: rotate(90deg);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes zoomIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
 </head>
 <body>
-       <!--Navigation-->  
+    <!--Navigation-->  
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
                 <i class="fas fa-graduation-cap me-2"></i>
-                 Proyecto Universidades 
+                Proyecto Universidades
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -39,12 +131,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="tendencias.html">Tendencias y PESTEL</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="futuro.html">Futuro Preferible</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-     <!--Cabecera-->   
+    <!--Cabecera-->   
     <section class="py-5 mt-5 bg-primary text-white">
         <div class="container">
             <div class="row">
@@ -59,7 +154,7 @@
         </div>
     </section>
 
-     <!--Teoria-->  
+    <!--Teoria-->  
     <section class="py-5">
         <div class="container">
             <div class="row">
@@ -68,126 +163,201 @@
                     <p class="lead">Análisis sistemático de señales emergentes en educación superior</p>
                 </div>
             </div>
-             <div class="signal-card">
-      <div class="d-flex align-items-center mb-2">
-        <i class="fas fa-random icon"></i>
-        <h4 class="mb-0">Carreras híbridas con rutas personalizadas</h4>
-      </div>
-      <p><strong>Ejemplo:</strong> Universidad de los Andes: currículo flexible con trayectorias personalizadas</p>
-      <div class="signal-meta">
-        <p><strong>Amenaza:</strong> Universidades tradicionales que no se adapten</p>
-        <p><strong>Escalabilidad:</strong> Alta: la tecnología ya existe y es asequible, permitiendo una educación más adaptativa y personalizada a gran escala.</p>
-        <p><strong>Impacto:</strong> Rompe con la rigidez curricular actual</p>
-        <p><strong>Oportunidades:</strong> Estudiantes, profesionales que trabajan, universidades innovadoras</p>
-        <p><strong>Unicidad:</strong> Flexibilidad total según necesidades del estudiante, con la integración de la IA y otras herramientas digitales para el desarrollo de habilidades del siglo XXI.</p>
-      </div>
+            <div class="signal-card">
+                <div class="d-flex align-items-center mb-2">
+                    <i class="fas fa-random icon"></i>
+                    <h4 class="mb-0">Carreras híbridas con rutas personalizadas</h4>
+                </div>
+                <p><strong>Ejemplo:</strong> Universidad de los Andes: currículo flexible con trayectorias personalizadas</p>
+                <div class="signal-meta">
+                    <p><strong>Amenaza:</strong> Universidades tradicionales que no se adapten</p>
+                    <p><strong>Escalabilidad:</strong> Alta: la tecnología ya existe y es asequible, permitiendo una educación más adaptativa y personalizada a gran escala.</p>
+                    <p><strong>Impacto:</strong> Rompe con la rigidez curricular actual</p>
+                    <p><strong>Oportunidades:</strong> Estudiantes, profesionales que trabajan, universidades innovadoras</p>
+                    <p><strong>Unicidad:</strong> Flexibilidad total según necesidades del estudiante, con la integración de la IA y otras herramientas digitales para el desarrollo de habilidades del siglo XXI.</p>
+                </div>
+            </div>
+
+            <div class="signal-card">
+                <div class="d-flex align-items-center mb-2">
+                    <i class="fas fa-certificate icon"></i>
+                    <h4 class="mb-0">Certificaciones privadas y microcredenciales reemplazan títulos</h4>
+                </div>
+                <p><strong>Ejemplo:</strong> Google Career Certificates y Coursera: microcredenciales reconocidas por empresas</p>
+                <div class="signal-meta">
+                    <p><strong>Amenaza:</strong> Facultades que dependen del sistema tradicional de títulos largos</p>
+                    <p><strong>Escalabilidad:</strong> Alta: plataformas como Coursera, edX y Google ya lo hacen</p>
+                    <p><strong>Impacto:</strong> Desvaloriza el modelo universitario clásico, transformándolo para abordar desafíos globales como la sostenibilidad y la desigualdad.</p>
+                    <p><strong>Oportunidades:</strong> Jóvenes sin acceso a universidades, empresas que capacitan directamente</p>
+                    <p><strong>Unicidad:</strong> Enfocado en habilidades prácticas y la necesidad de 'upskilling' y 'reskilling' para adaptarse a un mundo en constante cambio.</p>
+                </div>
+            </div>
+
+            <div class="signal-card">
+                <div class="d-flex align-items-center mb-2">
+                    <i class="fas fa-lightbulb icon"></i>
+                    <h4 class="mb-0">Universidades como centros de innovación y emprendimiento</h4>
+                </div>
+                <p><strong>Ejemplo:</strong> Universidad EAFIT (Medellín): Centro de Innovación, Consultoría y Empresarismo (CICE)</p>
+                <div class="signal-meta">
+                    <p><strong>Amenaza:</strong> Profesores centrados solo en teoría, carreras no prácticas</p>
+                    <p><strong>Escalabilidad:</strong> Media-alta: depende del apoyo estatal y privado</p>
+                    <p><strong>Impacto:</strong> Cambia la percepción de 'formarse' hacia 'crear valor', fomentando la creatividad y el pensamiento crítico.</p>
+                    <p><strong>Oportunidades:</strong> Emprendedores, estudiantes con ideas de negocio, región</p>
+                    <p><strong>Unicidad:</strong> Integración con ecosistemas empresariales y startups, promoviendo el aprendizaje colaborativo y la gamificación.</p>
+                </div>
+            </div>
+
+            <div class="signal-card">
+                <div class="d-flex align-items-center mb-2">
+                    <i class="fas fa-robot icon"></i>
+                    <h4 class="mb-0">IA como tutores personalizados</h4>
+                </div>
+                <p><strong>Ejemplo:</strong> Arizona State University: implementación de ChatGPT como tutor virtual personalizado</p>
+                <div class="signal-meta">
+                    <p><strong>Amenaza:</strong> Docentes que no actualicen su rol hacia mentoría o diseño instruccional</p>
+                    <p><strong>Escalabilidad:</strong> Muy alta: la IA ya está siendo integrada en la educación como una de las principales herramientas digitales para la transformación.</p>
+                    <p><strong>Impacto:</strong> Rompe con el modelo profesor-estudiante tradicional</p>
+                    <p><strong>Oportunidades:</strong> Estudiantes que necesitan acompañamiento individualizado, universidades que adopten IA</p>
+                    <p><strong>Unicidad:</strong> Educación adaptativa en tiempo real y personalizada por estudiante, ofreciendo soluciones escalables para mejorar el aprendizaje y la equidad.</p>
+                </div>
+            </div>
+
+            <div class="signal-card">
+                <div class="d-flex align-items-center mb-2">
+                    <i class="fas fa-infinity icon"></i>
+                    <h4 class="mb-0">Universidad como formación continua de por vida</h4>
+                </div>
+                <p><strong>Ejemplo:</strong> Pontificia Universidad Javeriana: programas de educación continua y upskilling</p>
+                <div class="signal-meta">
+                    <p><strong>Amenaza:</strong> Universidades que solo ofrecen programas largos y rígidos</p>
+                    <p><strong>Escalabilidad:</strong> Alta: demanda creciente por 'upskilling' y 'reskilling'</p>
+                    <p><strong>Impacto:</strong> Rompe con el modelo de 'entrar a los 18 y salir a los 23', estableciendo una nueva percepción del sistema educativo para construir un futuro mejor.</p>
+                    <p><strong>Oportunidades:</strong> Adultos, profesionales, empresas, gobierno</p>
+                    <p><strong>Unicidad:</strong> Formar a lo largo de toda la vida, según cambios del mercado laboral, con el objetivo de desarrollar habilidades del siglo XXI en un mundo en constante cambio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusiones -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Conclusiones</h2>
+            <div class="conclusion-item">
+                <div class="conclusion-icon"><i class="fas fa-random"></i></div>
+                <div class="conclusion-text">
+                    <h5>Flexibilidad Curricular</h5>
+                    <p>Las universidades deben integrar trayectorias adaptativas, apoyadas en IA y tecnologías digitales, para ajustarse a las necesidades de cada estudiante.</p>
+                </div>
+            </div>
+            <div class="conclusion-item">
+                <div class="conclusion-icon"><i class="fas fa-certificate"></i></div>
+                <div class="conclusion-text">
+                    <h5>Microcredenciales</h5>
+                    <p>El mercado laboral privilegia certificaciones prácticas y rápidas, impulsando procesos de upskilling y reskilling frente a los títulos extensos.</p>
+                </div>
+            </div>
+            <div class="conclusion-item">
+                <div class="conclusion-icon"><i class="fas fa-lightbulb"></i></div>
+                <div class="conclusion-text">
+                    <h5>Innovación y Emprendimiento</h5>
+                    <p>Las universidades se consolidan como motores de creación de valor, integrándose con ecosistemas empresariales y fomentando pensamiento crítico.</p>
+                </div>
+            </div>
+            <div class="conclusion-item">
+                <div class="conclusion-icon"><i class="fas fa-robot"></i></div>
+                <div class="conclusion-text">
+                    <h5>IA en la Educación</h5>
+                    <p>La inteligencia artificial permite un aprendizaje adaptativo en tiempo real, transformando la relación estudiante-profesor.</p>
+                </div>
+            </div>
+            <div class="conclusion-item">
+                <div class="conclusion-icon"><i class="fas fa-infinity"></i></div>
+                <div class="conclusion-text">
+                    <h5>Formación de por Vida</h5>
+                    <p>La educación se concibe como un proceso continuo que acompaña al individuo a lo largo de toda su vida, ajustándose a los cambios del mercado laboral.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva sección con los 5 botones del equipo -->
+    <section class="team-buttons-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="bg-light">Ruedas de Futuro</h2>
+                    <p class="text-white">Haz clic en cada miembro para ver la rueda que realizó.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center g-4">
+               
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <button class="team-button" onclick="openImageModal('isabella-c')">
+                        Isabella C
+                    </button>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <button class="team-button" onclick="openImageModal('guadalupe-c')">
+                        Guadalupe C
+                    </button>
+                </div>
+                 <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <button class="team-button" onclick="openImageModal('isabella-o')">
+                        Isabella O
+                    </button>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <button class="team-button" onclick="openImageModal('tomas-v')">
+                        Tomas V
+                    </button>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <button class="team-button" onclick="openImageModal('valeria-m')">
+                        Valeria M
+                    </button>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <button class="team-button" onclick="openImageModal('yesid')">
+                        Yesid H                 
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modales para mostrar las imágenes -->
+    <div id="modal-isabella-o" class="image-modal" onclick="closeImageModal('isabella-o')">
+        <span class="close-modal">&times;</span>
+        <img src="Files/IsabellaO.png" alt="Isabella O" class="modal-content-image">
     </div>
 
-    <div class="signal-card">
-      <div class="d-flex align-items-center mb-2">
-        <i class="fas fa-certificate icon"></i>
-        <h4 class="mb-0">Certificaciones privadas y microcredenciales reemplazan títulos</h4>
-      </div>
-      <p><strong>Ejemplo:</strong> Google Career Certificates y Coursera: microcredenciales reconocidas por empresas</p>
-      <div class="signal-meta">
-        <p><strong>Amenaza:</strong> Facultades que dependen del sistema tradicional de títulos largos</p>
-        <p><strong>Escalabilidad:</strong> Alta: plataformas como Coursera, edX y Google ya lo hacen</p>
-        <p><strong>Impacto:</strong> Desvaloriza el modelo universitario clásico, transformándolo para abordar desafíos globales como la sostenibilidad y la desigualdad.</p>
-        <p><strong>Oportunidades:</strong> Jóvenes sin acceso a universidades, empresas que capacitan directamente</p>
-        <p><strong>Unicidad:</strong> Enfocado en habilidades prácticas y la necesidad de 'upskilling' y 'reskilling' para adaptarse a un mundo en constante cambio.</p>
-      </div>
+    <div id="modal-isabella-c" class="image-modal" onclick="closeImageModal('isabella-c')">
+        <span class="close-modal">&times;</span>
+        <img src="Files/IsabellaC.jpeg" alt="Isabella C" class="modal-content-image">
     </div>
 
-    <div class="signal-card">
-      <div class="d-flex align-items-center mb-2">
-        <i class="fas fa-lightbulb icon"></i>
-        <h4 class="mb-0">Universidades como centros de innovación y emprendimiento</h4>
-      </div>
-      <p><strong>Ejemplo:</strong> Universidad EAFIT (Medellín): Centro de Innovación, Consultoría y Empresarismo (CICE)</p>
-      <div class="signal-meta">
-        <p><strong>Amenaza:</strong> Profesores centrados solo en teoría, carreras no prácticas</p>
-        <p><strong>Escalabilidad:</strong> Media-alta: depende del apoyo estatal y privado</p>
-        <p><strong>Impacto:</strong> Cambia la percepción de 'formarse' hacia 'crear valor', fomentando la creatividad y el pensamiento crítico.</p>
-        <p><strong>Oportunidades:</strong> Emprendedores, estudiantes con ideas de negocio, región</p>
-        <p><strong>Unicidad:</strong> Integración con ecosistemas empresariales y startups, promoviendo el aprendizaje colaborativo y la gamificación.</p>
-      </div>
+    <div id="modal-guadalupe-c" class="image-modal" onclick="closeImageModal('guadalupe-c')">
+        <span class="close-modal">&times;</span>
+        <img src="Files/Guadalupe.jpeg" alt="Guadalupe C" class="modal-content-image">
     </div>
 
-    <div class="signal-card">
-      <div class="d-flex align-items-center mb-2">
-        <i class="fas fa-robot icon"></i>
-        <h4 class="mb-0">IA como tutores personalizados</h4>
-      </div>
-      <p><strong>Ejemplo:</strong> Arizona State University: implementación de ChatGPT como tutor virtual personalizado</p>
-      <div class="signal-meta">
-        <p><strong>Amenaza:</strong> Docentes que no actualicen su rol hacia mentoría o diseño instruccional</p>
-        <p><strong>Escalabilidad:</strong> Muy alta: la IA ya está siendo integrada en la educación como una de las principales herramientas digitales para la transformación.</p>
-        <p><strong>Impacto:</strong> Rompe con el modelo profesor-estudiante tradicional</p>
-        <p><strong>Oportunidades:</strong> Estudiantes que necesitan acompañamiento individualizado, universidades que adopten IA</p>
-        <p><strong>Unicidad:</strong> Educación adaptativa en tiempo real y personalizada por estudiante, ofreciendo soluciones escalables para mejorar el aprendizaje y la equidad.</p>
-      </div>
+    <div id="modal-tomas-v" class="image-modal" onclick="closeImageModal('tomas-v')">
+        <span class="close-modal">&times;</span>
+        <img src="Files/TomasC.jpeg" alt="Tomas V" class="modal-content-image">
     </div>
 
-    <div class="signal-card">
-      <div class="d-flex align-items-center mb-2">
-        <i class="fas fa-infinity icon"></i>
-        <h4 class="mb-0">Universidad como formación continua de por vida</h4>
-      </div>
-      <p><strong>Ejemplo:</strong> Pontificia Universidad Javeriana: programas de educación continua y upskilling</p>
-      <div class="signal-meta">
-        <p><strong>Amenaza:</strong> Universidades que solo ofrecen programas largos y rígidos</p>
-        <p><strong>Escalabilidad:</strong> Alta: demanda creciente por 'upskilling' y 'reskilling'</p>
-        <p><strong>Impacto:</strong> Rompe con el modelo de 'entrar a los 18 y salir a los 23', estableciendo una nueva percepción del sistema educativo para construir un futuro mejor.</p>
-        <p><strong>Oportunidades:</strong> Adultos, profesionales, empresas, gobierno</p>
-        <p><strong>Unicidad:</strong> Formar a lo largo de toda la vida, según cambios del mercado laboral, con el objetivo de desarrollar habilidades del siglo XXI en un mundo en constante cambio.</p>
-      </div>
+    <div id="modal-valeria-m" class="image-modal" onclick="closeImageModal('valeria-m')">
+        <span class="close-modal">&times;</span>
+        <img src="Files/Valeria.jpeg" alt="Valeria M" class="modal-content-image">
     </div>
-  </div>
-
-  <!-- Conclusiones -->
-  <section class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-5">Conclusiones</h2>
-      <div class="conclusion-item">
-        <div class="conclusion-icon"><i class="fas fa-random"></i></div>
-        <div class="conclusion-text">
-          <h5>Flexibilidad Curricular</h5>
-          <p>Las universidades deben integrar trayectorias adaptativas, apoyadas en IA y tecnologías digitales, para ajustarse a las necesidades de cada estudiante.</p>
-        </div>
-      </div>
-      <div class="conclusion-item">
-        <div class="conclusion-icon"><i class="fas fa-certificate"></i></div>
-        <div class="conclusion-text">
-          <h5>Microcredenciales</h5>
-          <p>El mercado laboral privilegia certificaciones prácticas y rápidas, impulsando procesos de upskilling y reskilling frente a los títulos extensos.</p>
-        </div>
-      </div>
-      <div class="conclusion-item">
-        <div class="conclusion-icon"><i class="fas fa-lightbulb"></i></div>
-        <div class="conclusion-text">
-          <h5>Innovación y Emprendimiento</h5>
-          <p>Las universidades se consolidan como motores de creación de valor, integrándose con ecosistemas empresariales y fomentando pensamiento crítico.</p>
-        </div>
-      </div>
-      <div class="conclusion-item">
-        <div class="conclusion-icon"><i class="fas fa-robot"></i></div>
-        <div class="conclusion-text">
-          <h5>IA en la Educación</h5>
-          <p>La inteligencia artificial permite un aprendizaje adaptativo en tiempo real, transformando la relación estudiante-profesor.</p>
-        </div>
-      </div>
-      <div class="conclusion-item">
-        <div class="conclusion-icon"><i class="fas fa-infinity"></i></div>
-        <div class="conclusion-text">
-          <h5>Formación de por Vida</h5>
-          <p>La educación se concibe como un proceso continuo que acompaña al individuo a lo largo de toda su vida, ajustándose a los cambios del mercado laboral.</p>
-        </div>
-      </div>
+    <div id="modal-yesid" class="image-modal" onclick="closeImageModal('yesid')">
+        <span class="close-modal">&times;</span>
+        <img src="Files/Yesid.png" alt="Yesid H class="modal-content-image">
     </div>
-  </section>
 
     <!--Video --> 
-
     <section class="py-5 bg-light">
         <div class="container">
             <div class="row">
@@ -210,8 +380,7 @@
         </div>
     </section>
 
-
-     <!--Footer--> 
+    <!--Footer--> 
     <footer class="bg-dark text-white py-4">
         <div class="container">
             <div class="row">
@@ -226,7 +395,33 @@
         </div>
     </footer>
 
-     <!--Boostrap JS--> 
+    <!--Bootstrap JS--> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript para controlar los modales -->
+    <script>
+        function openImageModal(personId) {
+            const modal = document.getElementById('modal-' + personId);
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevenir scroll
+        }
+
+        function closeImageModal(personId) {
+            const modal = document.getElementById('modal-' + personId);
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Restaurar scroll
+        }
+
+        // Cerrar modal con tecla ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const activeModal = document.querySelector('.image-modal.active');
+                if (activeModal) {
+                    activeModal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        });
+    </script>
 </body>
 </html>
