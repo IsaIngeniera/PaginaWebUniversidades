@@ -388,5 +388,181 @@ h2 {
 .analisis-tendencias-section {
   margin-top: 40px; /* Agrega espacio entre secciones */
 }
+/* ============================================
+   ESTILOS PARA PÁGINA FUTURO PREFERIBLE
+   Agrega estos estilos a tu archivo styles.css existente
+   ============================================ */
+
+/* Fuente principal */
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Fondo general de la página */
+.futuro-content-area {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  padding: 60px 0;
+}
+
+/* Header con gradiente morado/púrpura */
+.futuro-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Contenedor de cada sección */
+.futuro-section-container {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de cada sección */
+.futuro-section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+/* Línea decorativa debajo del título */
+.futuro-section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+/* Botones/Cards interactivos */
+.futuro-card-button {
+  background: white;
+  border: 2px solid #e0e6ed;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de brillo al pasar el mouse */
+.futuro-card-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.futuro-card-button:hover::before {
+  left: 100%;
+}
+
+/* Efecto hover en los botones */
+.futuro-card-button:hover {
+  transform: translateY(-5px);
+  border-color: #667eea;
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+/* Iconos de los botones */
+.futuro-card-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Título de cada card */
+.futuro-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+}
+
+/* Subtítulo de cada card */
+.futuro-card-subtitle {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-top: 8px;
+}
+
+/* ============================================
+   COLORES ESPECÍFICOS POR SECCIÓN
+   ============================================ */
+
+/* Sección 1: Retomar el presente (Azul) */
+.futuro-section-1 .futuro-card-button:hover {
+  border-color: #3498db;
+}
+
+.futuro-section-1 .futuro-card-icon {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Sección 2: Proyectar el Futuro deseado (Rojo) */
+.futuro-section-2 .futuro-card-button:hover {
+  border-color: #e74c3c;
+}
+
+.futuro-section-2 .futuro-card-icon {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Sección 3: Construyendo el puente (Verde) */
+.futuro-section-3 .futuro-card-button:hover {
+  border-color: #27ae60;
+}
+
+.futuro-section-3 .futuro-card-icon {
+  background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .futuro-section-container {
+    padding: 25px;
+  }
+
+  .futuro-section-title {
+    font-size: 1.5rem;
+  }
+
+  .futuro-card-icon {
+    font-size: 2.5rem;
+  }
+}
 
     
